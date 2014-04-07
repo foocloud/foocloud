@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# virtualenvwrapper needs this
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME
+source /usr/local/bin/virtualenvwrapper.sh
+
+mkvirtualenv gae
+pip install requests
+pip install gaeenv
+gaeenv install sdk --version=1.8.9
+
+echo
+echo "DONE!"
+echo
+deactivate
