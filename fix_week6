@@ -5,12 +5,33 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME
 source /usr/local/bin/virtualenvwrapper.sh
 
+echo
+echo "About to patch your FIT1038 VM"
+echo "Please, ignore the warnings..."
+echo 
+echo "This should take less than three minutes, total."
+echo
+echo "More like 2 minutes, really."
+echo
+echo "I'm even going to time myself."
+echo
+echo "Countdown!"
+echo
+for n in 3 2 1; do echo "$n..."; sleep 1; done
+echo "GO!"
+echo
+echo
+
 mkvirtualenv gae
 pip install requests
 pip install gaeenv
-gaeenv install sdk --version=1.8.9
+
+echo
+echo "Now installing Google App Engine."
+echo "When I'm done, you'll see how long I took."
+echo "Barely two minutes left now..."
+time gaeenv install sdk --version=1.8.9
 
 echo
 echo "DONE!"
 echo
-deactivate
